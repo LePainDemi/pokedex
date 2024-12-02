@@ -1,0 +1,19 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: pokeapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pokeapi
+  template:
+    metadata:
+      labels:
+        app: pokeapi
+    spec:
+      containers:
+      - image: pokeapi:0.1
+        name: pokeapi
+        ports:
+        - containerPort: 3000
