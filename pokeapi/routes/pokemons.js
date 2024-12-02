@@ -30,10 +30,9 @@ async function routes(fastify, options) {
     fastify.get('/pokemon/:id', async (request, reply) => {
         try {
             const { id } = request.params;
-            const min_range = parseInt(request.query.start) || parseInt(process.env.POKEDEX_START_NUMBER) || 1;
-            const max_range = parseInt(request.query.end) || parseInt(process.env.POKEDEX_END_NUMBER) || 1;
 
-            if (isNaN(id)) {
+            const numericId = Number(id);
+            if (isNaN(numericId)) {
                 return fastify.httpErrors.badRequest("id must be a number");
             }
 
