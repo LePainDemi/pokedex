@@ -4,6 +4,6 @@ metadata:
   name: pokedex-cm
 data:
   POKEDEX_NAME: "Johto"
-  POKEDEX_START_NUMBER: 152
-  POKEDEX_END_NUMBER: 386
+  POKEDEX_START_NUMBER: "152"
+  POKEDEX_END_NUMBER: "386"
 
