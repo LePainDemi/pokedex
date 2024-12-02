@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokedex-johto
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: pokedex-johto
+  template:
+    metadata:
+      labels:
+        app: pokedex-johto
+    spec:
+      containers:
+      - image: pokeapi:0.1
+        name: pokedex-johto
+        ports:
+        - containerPort: 3000
+        env:
+          - name: API_URL
+            valuefrom:
+              configMapKeyRef:
+                name: pokedex-cm
+                key: API_URL
