@@ -20,17 +20,17 @@ spec:
         - containerPort: 3000
         env:
           - name: POKEDEX_NAME
-            valuefrom:
+            valueFrom:
               configMapKeyRef:
                 name: pokedex-johto-cm
                 key: POKEDEX_NAME
           - name: POKEDEX_START_NUMBER
-            valuefrom:
+            valueFrom:
               configMapKeyRef:
                 name: pokedex-johto-cm
                 key: POKEDEX_START_NUMBER
           - name: POKEDEX_END_NUMBER
-            valuefrom:
+            valueFrom:
               configMapKeyRef:
                 name: pokedex-johto-cm
                 key: POKEDEX_END_NUMBER
