@@ -22,5 +22,5 @@ spec:
           - name: API_URL
             valuefrom:
               configMapKeyRef:
-                name: pokedex-cm
+                name: pokedex-johto-cm
                 key: API_URL

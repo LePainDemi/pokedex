@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: pokedex-cm
+  name: pokedex-johto-cm
 data:
   POKEDEX_NAME: "Johto"
   POKEDEX_START_NUMBER: "152"
