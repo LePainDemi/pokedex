@@ -4,6 +4,7 @@ metadata:
   name: pokedex-ui
 spec:
   replicas: 2
+  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: pokedex-ui
@@ -17,3 +18,9 @@ spec:
         name: pokedex-ui
         ports:
         - containerPort: 3000
+        env:
+          - name: API_URL
+            valuefrom:
+              configMapKeyRef:
+                name: pokedex-cm
+                key: API_URL
