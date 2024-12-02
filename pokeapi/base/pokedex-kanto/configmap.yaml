@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: pokedex-cm
+  name: pokedex-kanto-cm
 data:
   POKEDEX_NAME: "Kanto"
   POKEDEX_START_NUMBER: "1"
