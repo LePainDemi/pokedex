@@ -4,6 +4,6 @@ kind: Kustomization
 namespace: pokedex-kustomize
 
 resources:
-- pokedex-ui/
+- pokedex-kanto/
 - pokedex-johto/
 
