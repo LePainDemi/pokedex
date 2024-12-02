@@ -19,8 +19,18 @@ spec:
         ports:
         - containerPort: 3000
         env:
-          - name: API_URL
+          - name: POKEDEX_NAME
             valuefrom:
               configMapKeyRef:
                 name: pokedex-kanto-cm
-                key: API_URL
+                key: POKEDEX_NAME
+          - name: POKEDEX_START_NUMBER
+            valuefrom:
+              configMapKeyRef:
+                name: pokedex-kanto-cm
+                key: POKEDEX_START_NUMBER
+          - name: POKEDEX_END_NUMBER
+            valuefrom:
+              configMapKeyRef:
+                name: pokedex-kanto-cm
+                key: POKEDEX_END_NUMBER
