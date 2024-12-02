@@ -4,6 +4,6 @@ metadata:
   name: pokedex-cm
 data:
   POKEDEX_NAME: "Kanto"
-  POKEDEX_START_NUMBER: "0"
+  POKEDEX_START_NUMBER: "1"
   POKEDEX_END_NUMBER: "151"
 
